@@ -1,0 +1,20 @@
+# Example Kubernetes YAML for deploying TRON node
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tron-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tron-node
+  template:
+    metadata:
+      labels:
+        app: tron-node
+    spec:
+      containers:
+      - name: tron-node
+        image: your-tron-node-image:latest
+        ports:
+        - containerPort: 8080

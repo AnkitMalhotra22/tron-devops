@@ -1,0 +1,10 @@
+---
+- name: Setup TRON nodes
+  hosts: all
+  tasks:
+    - name: Install Java
+      apt:
+        name: openjdk-8-jdk
+        state: present
+
+    # Add more tasks as per your infrastructure setup
